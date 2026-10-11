@@ -5,6 +5,7 @@ Ready-to-install Nextcloud apps by [CyberFox-81](https://github.com/CyberFox-81)
 <!-- plugins:start -->
 | App | Version | Nextcloud | What it does | Download |
 |---|---|---|---|---|
+| **CADCraft integration** (`integration_cadcraft`) | 0.1.0 | 33–35 | Open and edit DXF and DWG drawings in Nextcloud with CADCraft | [integration_cadcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_cadcraft/integration_cadcraft.tar.gz) · [changes](integration_cadcraft/CHANGELOG.md) |
 | **DeckCraft integration** (`integration_deckcraft`) | 0.1.0 | 33–35 | Edit PowerPoint presentations in Nextcloud with DeckCraft | [integration_deckcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_deckcraft/integration_deckcraft.tar.gz) · [changes](integration_deckcraft/CHANGELOG.md) |
 | **PdfCraft integration** (`integration_pdfcraft`) | 0.1.1 | 33–35 | Edit PDFs in your Nextcloud with the PdfCraft PDF workbench | [integration_pdfcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_pdfcraft/integration_pdfcraft.tar.gz) · [changes](integration_pdfcraft/CHANGELOG.md) |
 | **WordCraft integration** (`integration_wordcraft`) | 0.1.0 | 33–35 | Write and edit Word and OpenDocument files in Nextcloud with the WordCraft word processor | [integration_wordcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_wordcraft/integration_wordcraft.tar.gz) · [changes](integration_wordcraft/CHANGELOG.md) |
