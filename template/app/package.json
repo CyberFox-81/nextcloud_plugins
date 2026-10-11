@@ -1,6 +1,6 @@
 {
   "name": "{{APP_ID}}",
-  "version": "0.1.0",
+  "version": "{{APP_VERSION}}",
   "private": true,
   "description": "{{SUMMARY}}",
   "license": "AGPL-3.0-or-later",

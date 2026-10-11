@@ -16,7 +16,7 @@ Two layouts for the page in the editor's iframe:
 ## Updating an app
 
 1. Change the template (or the app's JSON), then regenerate: `python3 generate.py apps/<id>.json ../../nextcloud-<id>`.
-2. Bump `<version>` in the app's `appinfo/info.xml` and `package.json`, and add a `CHANGELOG.md` entry.
+2. Bump `version` in `apps/<id>.json` (it fills `appinfo/info.xml` and `package.json`), and add a `CHANGELOG.md` entry in the app.
 3. In the app: `make js`, `make wasm` (or reuse `web/` when the upstream build didn't change), `make dist`.
 4. Publish here: `scripts/update-plugin.py ../nextcloud-<id>/build/dist/integration_<id>-<version>.tar.gz`, commit `integration_<id> <version>` and push.
 

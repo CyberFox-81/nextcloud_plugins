@@ -57,6 +57,7 @@ def values(cfg: dict) -> dict:
         "DEFAULT_REF": cfg["upstream_ref"],
         "UPSTREAM_SHORT": cfg["upstream_ref"][:7],
         "UPSTREAM_VERSION": cfg["upstream_version"],
+        "APP_VERSION": cfg.get("version", "0.1.0"),
         "CARGO_PACKAGE": cfg.get("cargo_package", f"{cfg['id']}-web"),
         "WASM_FILE": cfg.get("wasm_file", f"{cfg['id']}-web.wasm"),
         "CARGO_FEATURES_ARGS": f" --features {cfg['cargo_features']}" if cfg.get("cargo_features") else "",

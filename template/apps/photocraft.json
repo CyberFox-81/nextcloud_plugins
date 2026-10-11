@@ -1,5 +1,6 @@
 {
   "id": "photocraft",
+  "version": "0.1.1",
   "name": "PhotoCraft",
   "kind": "image editor",
   "noun": "image",
@@ -7,10 +8,62 @@
   "file_types": "photo, Photoshop or PhotoCraft",
   "summary": "Edit photos and Photoshop files in Nextcloud with PhotoCraft",
   "description": "Open a photo or a layered image in Files with **Edit in PhotoCraft** and work on it right in the browser: layers, masks, adjustment layers, selections, brushes, retouching, filters and text, with Photoshop (PSD, PSB) files as well as PNG, JPEG, TIFF, WebP, HEIC and camera raw files.\n\n- **Save** writes a layered file (PSD, PSB, PhotoCraft) straight back to Nextcloud, which keeps the previous state as a file version. A flat image that gained layers asks for a name and folder first, as in Photoshop.\n- **Save As** and **Export** store a file in any folder you pick.\n- Read-only files open normally; saving offers a copy.\n- If someone else changes the file while you have it open, you choose whether to replace their version or save a copy.\n- Optionally, clicking an image in Files opens it in PhotoCraft instead of the viewer.",
-  "categories": ["multimedia", "files", "integration"],
-  "mimes": ["image/png", "image/jpeg", "image/tiff", "image/webp", "image/gif", "image/bmp", "application/x-photoshop", "image/vnd.adobe.photoshop", "image/heic", "image/heif", "image/x-dcraw", "image/tga", "image/x-icon"],
-  "extensions": ["pcraft", "psd", "psb", "psdt", "pdn", "ora", "exr", "hdr", "qoi", "pbm", "pgm", "ppm", "pam", "pfm", "tga", "afphoto"],
-  "document_extensions": [".pcraft", ".psd", ".psb", ".psdt", ".tif", ".tiff", ".png", ".jpg", ".jpeg", ".webp", ".gif", ".bmp", ".ora", ".exr", ".qoi", ".tga"],
+  "categories": [
+    "multimedia",
+    "files",
+    "integration"
+  ],
+  "mimes": [
+    "image/png",
+    "image/jpeg",
+    "image/tiff",
+    "image/webp",
+    "image/gif",
+    "image/bmp",
+    "application/x-photoshop",
+    "image/vnd.adobe.photoshop",
+    "image/heic",
+    "image/heif",
+    "image/x-dcraw",
+    "image/tga",
+    "image/x-icon"
+  ],
+  "extensions": [
+    "pcraft",
+    "psd",
+    "psb",
+    "psdt",
+    "pdn",
+    "ora",
+    "exr",
+    "hdr",
+    "qoi",
+    "pbm",
+    "pgm",
+    "ppm",
+    "pam",
+    "pfm",
+    "tga",
+    "afphoto"
+  ],
+  "document_extensions": [
+    ".pcraft",
+    ".psd",
+    ".psb",
+    ".psdt",
+    ".tif",
+    ".tiff",
+    ".png",
+    ".jpg",
+    ".jpeg",
+    ".webp",
+    ".gif",
+    ".bmp",
+    ".ora",
+    ".exr",
+    ".qoi",
+    ".tga"
+  ],
   "canvas_id": "photocraft_canvas",
   "loading_id": "photocraft_loading",
   "background": "#262626",
@@ -20,9 +73,11 @@
   "readme_limitations": "- Brush, gradient and swatch libraries stay in the browser's storage, as in PhotoCraft's own web version.",
   "bridge_notes": "With `?host=parent`, Save, Save As and Export ask the parent where to save (`photocraft:pick-save`), what PhotoCraft writes goes to the parent instead of the browser's downloads, and the parent (not PhotoCraft) guards leaving the page with unsaved changes. File › Open keeps the browser's own file picker.",
   "pick_save": true,
-  "upstream_ref": "953390a36ef59c6ca04c5850b5b5d9d0dd9e625a",
-  "upstream_version": "0.6.0",
+  "upstream_ref": "20dab123fbf3af71c226ff0abbbd72c3479d4b42",
+  "upstream_version": "0.7.0",
   "cargo_profile": "wasm-release",
   "cargo_features": "heif",
-  "bindgen_flags": ["--weak-refs"]
+  "bindgen_flags": [
+    "--weak-refs"
+  ]
 }

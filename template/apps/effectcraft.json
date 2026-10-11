@@ -1,5 +1,6 @@
 {
   "id": "effectcraft",
+  "version": "0.1.1",
   "name": "EffectCraft",
   "kind": "motion graphics and visual effects app",
   "noun": "project",
@@ -7,10 +8,24 @@
   "file_types": "video or EffectCraft project",
   "summary": "Make motion graphics and effects in Nextcloud with EffectCraft",
   "description": "Open an EffectCraft project or a video (MP4, MOV, WebM) in Files with **Edit in EffectCraft** and work right in the browser, the way you know from After Effects: compositions, layers, keyframes, hundreds of effects, layer styles, expressions, 3D cameras and lights, and the Render Queue.\n\n- A video is imported as footage. **Save** stores the project (.ecproj) in the folder you pick the first time, and to that file from then on.\n- Opening a saved project fetches its footage from your Nextcloud.\n- Render Queue outputs store the file in any folder you pick.\n- If someone else changes the project while you have it open, you choose whether to replace their version or save a copy.\n- Optionally, clicking an EffectCraft project in Files opens it in EffectCraft.",
-  "categories": ["multimedia", "files", "integration"],
-  "mimes": ["video/mp4", "video/quicktime", "video/webm"],
-  "extensions": ["ecproj", "ecprojx"],
-  "document_extensions": [".ecproj", ".ecprojx"],
+  "categories": [
+    "multimedia",
+    "files",
+    "integration"
+  ],
+  "mimes": [
+    "video/mp4",
+    "video/quicktime",
+    "video/webm"
+  ],
+  "extensions": [
+    "ecproj",
+    "ecprojx"
+  ],
+  "document_extensions": [
+    ".ecproj",
+    ".ecprojx"
+  ],
   "canvas_id": "effectcraft_canvas",
   "loading_id": "loading",
   "background": "#1b1c1f",
@@ -23,8 +38,8 @@
   "new_format_hint": "EffectCraft saves your work as a project file; {name} stays as it is.",
   "open_as_blob": true,
   "static_frame": true,
-  "upstream_ref": "4b58cd2eb733bdc7ad39161e93dd8e2ff4af6416",
-  "upstream_version": "0.7.0",
+  "upstream_ref": "9a7d3e76991d5372448033b473dc12c2480a6a04",
+  "upstream_version": "0.8.0",
   "cargo_package": "effectcraft-web",
   "wasm_file": "effectcraft_web.wasm",
   "bindgen_out_name": "effectcraft_web",
@@ -34,5 +49,7 @@
   "boot_init_arg": "module",
   "boot_after": "\tawait app.start('effectcraft_canvas')",
   "extra_assets_sh": "# The render workers and the audio worklet EffectCraft starts by relative URLs.\ncp \"$SRC/apps/effectcraft-web/web/worker.js\" \"$DEST/worker.js\"\ncp \"$SRC/apps/effectcraft-web/web/audio-worklet.js\" \"$DEST/audio-worklet.js\"\n",
-  "web_extra_rows": ["| `build.txt`, `build-<hash>/` | The current build: `frame.html` (the page in the editor's iframe, static so EffectCraft's relative URLs resolve in its folder), `boot.js`, the glue and its `snippets/`, the wasm, `worker.js` (render and frame workers) and `audio-worklet.js` |"]
+  "web_extra_rows": [
+    "| `build.txt`, `build-<hash>/` | The current build: `frame.html` (the page in the editor's iframe, static so EffectCraft's relative URLs resolve in its folder), `boot.js`, the glue and its `snippets/`, the wasm, `worker.js` (render and frame workers) and `audio-worklet.js` |"
+  ]
 }

@@ -15,7 +15,7 @@
 This is a community integration based on [{{NAME}}](https://github.com/storytold/{{ID}}) by the ArtCraft team, an open-source, Rust-native {{KIND}}. It embeds a build of {{NAME}} and is not made or endorsed by the ArtCraft team.
 
 **Requirements:** a browser with WebGPU or WebGL2, and a web server that serves `.wasm` files as `application/wasm` (Nextcloud's own Apache and nginx configurations do).]]></description>
-	<version>0.1.0</version>
+	<version>{{APP_VERSION}}</version>
 	<licence>agpl</licence>
 	<author mail="brittondcouchman@gmail.com" homepage="https://github.com/CyberFox-81">Britton Couchman</author>
 	<namespace>{{NAMESPACE}}</namespace>
