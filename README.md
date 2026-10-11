@@ -19,7 +19,7 @@ Ready-to-install Nextcloud apps by [CyberFox-81](https://github.com/CyberFox-81)
 | **WordCraft integration** (`integration_wordcraft`) | 0.1.1 | 33–35 | Write and edit Word and OpenDocument files in Nextcloud with the WordCraft word processor | [integration_wordcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_wordcraft/integration_wordcraft.tar.gz) · [changes](integration_wordcraft/CHANGELOG.md) |
 <!-- plugins:end -->
 
-Source code: [integration_pdfcraft](https://github.com/CyberFox-81/integration_pdfcraft); the other apps' repositories are coming soon. Checksums: [SHA256SUMS](SHA256SUMS).
+Source code: [integration_pdfcraft](https://github.com/CyberFox-81/integration_pdfcraft), [integration_wordcraft](https://github.com/CyberFox-81/integration_wordcraft), [integration_deckcraft](https://github.com/CyberFox-81/integration_deckcraft), [integration_cadcraft](https://github.com/CyberFox-81/integration_cadcraft), [integration_photocraft](https://github.com/CyberFox-81/integration_photocraft), [integration_vectorcraft](https://github.com/CyberFox-81/integration_vectorcraft), [integration_filmcraft](https://github.com/CyberFox-81/integration_filmcraft), [integration_effectcraft](https://github.com/CyberFox-81/integration_effectcraft), [integration_gridcraft](https://github.com/CyberFox-81/integration_gridcraft), [integration_soundcraft](https://github.com/CyberFox-81/integration_soundcraft), [integration_designcraft](https://github.com/CyberFox-81/integration_designcraft); integration_lightcraft's repository is coming soon. Checksums: [SHA256SUMS](SHA256SUMS).
 
 ## Before you start
 
