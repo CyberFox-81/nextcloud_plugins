@@ -69,7 +69,7 @@ let openByDefault = loadState<boolean>(APP, 'openByDefault', false)
  * Formats that keep the whole {{NOUN}}. Saving in one of them can make that file the {{NOUN}}'s
  * file; anything else (PDF, PNG…) is an export, a copy that leaves the {{NOUN}} where it is.
  */
-const DOCUMENT_EXTENSIONS = new Set([{{DOCUMENT_EXTENSIONS_TS}}])
+const DOCUMENT_EXTENSIONS = new Set<string>([{{DOCUMENT_EXTENSIONS_TS}}])
 
 /**
  * Where a plain Save goes, by the file name {{NAME}} saves under: the opened file's name at
@@ -452,10 +452,11 @@ async function put(path: string, bytes: ArrayBuffer, conditions: Record<string, 
 		credentials: 'same-origin',
 	})
 	const response = await send()
-	if (response.status !== 409) {
+	// 404 or 409: the folder doesn't exist yet, as when {{NAME}} saves into a new folder (such as
+	// a project's media).
+	if (response.status !== 404 && response.status !== 409) {
 		return response
 	}
-	// The folder doesn't exist yet: {{NAME}} saves into a new folder (such as a project's media).
 	await createFolder(dirname(path))
 	return send()
 }
