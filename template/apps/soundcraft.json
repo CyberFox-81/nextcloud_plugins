@@ -1,0 +1,65 @@
+{
+  "id": "soundcraft",
+  "name": "SoundCraft",
+  "kind": "audio workstation",
+  "noun": "session",
+  "nouns": "sessions",
+  "file_types": "audio or SoundCraft",
+  "summary": "Edit audio and SoundCraft sessions in Nextcloud with SoundCraft",
+  "description": "Open an audio file (WAV, AIFF, FLAC, MP3, Ogg Vorbis, AAC/M4A, CAF) or a SoundCraft session in Files with **Edit in SoundCraft** and work on it right in the browser, the way you know from a studio workstation: tracks, clips, edits and fades, the mixer with sends and plug-ins, automation, MIDI and bouncing.\n\n- An audio file opens as a new session of the same name. **Save** stores the session next to it (a .scraft file, with its audio in an *Audio Files* folder), and later saves go there. Nextcloud keeps the previous state of a session as a file version.\n- **Bounce Mix** and the exports store a file in the folder you type, in your Nextcloud.\n- Reopening a session loads its audio from your Nextcloud.\n- Read-only files open normally; saving offers a copy.\n- If someone else changes the session while you have it open, you choose whether to replace their version or save a copy.\n- Optionally, clicking an audio file or a session in Files opens it in SoundCraft.",
+  "categories": [
+    "multimedia",
+    "files",
+    "integration"
+  ],
+  "mimes": [
+    "audio/wav",
+    "audio/x-wav",
+    "audio/wave",
+    "audio/vnd.wave",
+    "audio/aiff",
+    "audio/x-aiff",
+    "audio/flac",
+    "audio/x-flac",
+    "audio/mpeg",
+    "audio/ogg",
+    "audio/vorbis",
+    "audio/mp4",
+    "audio/x-m4a",
+    "audio/aac",
+    "audio/x-caf"
+  ],
+  "extensions": [
+    "scraft",
+    "wav",
+    "wave",
+    "bwf",
+    "aif",
+    "aiff",
+    "aifc",
+    "flac",
+    "mp3",
+    "ogg",
+    "oga",
+    "m4a",
+    "aac",
+    "caf"
+  ],
+  "document_extensions": [
+    ".scraft"
+  ],
+  "canvas_id": "soundcraft_canvas",
+  "background": "#1e1f22",
+  "background_dark": "#1e1f22",
+  "icon_path": "M3 10h2v4H3Zm4-3h2v10H7Zm4-4h2v18h-2Zm4 5h2v8h-2Zm4 2h2v4h-2Z",
+  "readme_features": "- **Edit in SoundCraft** appears in the Files action menu of every audio file SoundCraft reads (WAV/BWF, AIFF, FLAC, MP3, Ogg Vorbis, AAC/M4A, CAF) and of every SoundCraft session (.scraft).\n- An audio file opens as a new session named after it, with the file on a track. **Save** (Ctrl/⌘+S) stores the session next to the file as `<name>.scraft`, with its audio in an *Audio Files* folder beside it, as SoundCraft does on the desktop; the original audio file stays as it is. Later saves go to the session, and Nextcloud keeps its previous state as a file version.\n- Opening a session loads the audio files it uses from your Nextcloud; files that can't be read are reported as missing.\n- File prompts (**Save Session As**, **Bounce Mix**, the exports) take paths in your Nextcloud and start in the session's folder; missing folders are created.\n- Drop audio files from your computer on the window to import them onto new tracks.",
+  "readme_limitations": "- **File › Import** can't read files from your Nextcloud by path in the browser: drop the files on the window instead.\n- Plug-ins are SoundCraft's own; third-party plug-ins (CLAP, VST3, AU) and recording from inputs need the desktop app.\n- Browsers start audio only after a click or key press, so playback may need one click first. Large sessions use a lot of memory in the browser.",
+  "bridge_notes": "Files the parent sends, and everything SoundCraft writes, go by their paths on the parent's side (`/Music/Song.wav`), through the engine's in-memory files. Before a session opens, SoundCraft asks for the audio it uses:\n\n| Message | Direction | Fields | Meaning |\n|---|---|---|---|\n| `soundcraft:need` | SoundCraft → parent | `paths` | Audio files an opened session uses. |\n| `soundcraft:file` | parent → SoundCraft | `path`, `blob` or `error` | One of them, or why it can't be had (it opens as missing). |\n\n`soundcraft:open` also carries `path` and sends a `Blob` rather than bytes; an audio file opens as a new session whose Save goes next to it. Every `soundcraft:save` is named by its path, with `quiet: true` for the audio saved along with a session in its `Audio Files` folder. In host mode the demo session doesn't open, audio files dropped on the window are imported, and the parent guards leaving the page.",
+  "open_as_blob": true,
+  "boot_before": "\t// Browsers start audio only after a user gesture: SoundCraft's audio output is built at\n\t// startup, so resume every AudioContext it creates on the first click or key press.\n\tconst AudioContextBase = window.AudioContext || window.webkitAudioContext\n\tif (AudioContextBase) {\n\t\tconst contexts = []\n\t\tconst Resumable = function (options) {\n\t\t\tconst context = new AudioContextBase(options)\n\t\t\tcontexts.push(context)\n\t\t\treturn context\n\t\t}\n\t\tResumable.prototype = AudioContextBase.prototype\n\t\twindow.AudioContext = Resumable\n\t\tif (window.webkitAudioContext) {\n\t\t\twindow.webkitAudioContext = Resumable\n\t\t}\n\t\tconst resume = () => contexts.forEach((context) => { if (context.state === 'suspended') { context.resume().catch(() => {}) } })\n\t\tfor (const type of ['pointerdown', 'mousedown', 'touchstart', 'keydown']) {\n\t\t\twindow.addEventListener(type, resume, { capture: true })\n\t\t}\n\t}\n",
+  "upstream_ref": "7414719f3760de1c9359ec9723351a7232442e61",
+  "upstream_version": "0.5.0",
+  "bindgen_flags": [
+    "--weak-refs"
+  ]
+}
