@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+  - SPDX-FileCopyrightText: 2026 Britton Couchman <brittondcouchman@gmail.com>
+  - SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+	<id>{{APP_ID}}</id>
+	<name>{{NAME}} integration</name>
+	<summary>{{SUMMARY}}</summary>
+	<description><![CDATA[{{DESCRIPTION}}
+
+{{NAME}} runs entirely in your browser as WebAssembly. Files go only between your browser and your Nextcloud, and the server needs no extra software.
+
+This is a community integration based on [{{NAME}}](https://github.com/storytold/{{ID}}) by the ArtCraft team, an open-source, Rust-native {{KIND}}. It embeds a build of {{NAME}} and is not made or endorsed by the ArtCraft team.
+
+**Requirements:** a browser with WebGPU or WebGL2, and a web server that serves `.wasm` files as `application/wasm` (Nextcloud's own Apache and nginx configurations do).]]></description>
+	<version>0.1.0</version>
+	<licence>agpl</licence>
+	<author mail="brittondcouchman@gmail.com" homepage="https://github.com/CyberFox-81">Britton Couchman</author>
+	<namespace>{{NAMESPACE}}</namespace>
+{{CATEGORIES_XML}}
+	<website>https://github.com/CyberFox-81/{{APP_ID}}</website>
+	<bugs>https://github.com/CyberFox-81/{{APP_ID}}/issues</bugs>
+	<repository type="git">https://github.com/CyberFox-81/{{APP_ID}}.git</repository>
+	<dependencies>
+		<nextcloud min-version="33" max-version="35"/>
+	</dependencies>
+</info>

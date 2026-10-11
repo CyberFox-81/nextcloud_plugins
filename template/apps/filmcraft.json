@@ -1,0 +1,62 @@
+{
+  "id": "filmcraft",
+  "name": "FilmCraft",
+  "kind": "video editor",
+  "noun": "project",
+  "nouns": "videos and projects",
+  "file_types": "video or FilmCraft project",
+  "summary": "Edit videos in Nextcloud with the FilmCraft video editor",
+  "description": "Open a video (MP4, MOV, WebM, MKV, MXF, MPEG-TS) or a FilmCraft project in Files with **Edit in FilmCraft** and edit right in the browser, the way you know from Premiere Pro: the timeline, trimming, transitions, effects, color, audio, titles and captions.\n\n- A video opens in a new project; **Save** stores the project (.fcproj) in the folder you pick, next to the video by default, and later saves go to that file.\n- Opening a saved project fetches its media from your Nextcloud.\n- Exports (renders) store the file in any folder you pick.\n- If someone else changes the project while you have it open, you choose whether to replace their version or save a copy.\n- Optionally, clicking a video or project in Files opens it in FilmCraft.",
+  "categories": [
+    "multimedia",
+    "files",
+    "integration"
+  ],
+  "mimes": [
+    "video/mp4",
+    "video/quicktime",
+    "video/webm",
+    "video/x-matroska",
+    "video/mp2t",
+    "video/ogg",
+    "application/mxf"
+  ],
+  "extensions": [
+    "fcproj",
+    "mxf",
+    "mts",
+    "m2ts",
+    "ts",
+    "mkv",
+    "webm",
+    "mov",
+    "mp4",
+    "m4v"
+  ],
+  "document_extensions": [
+    ".fcproj"
+  ],
+  "canvas_id": "filmcraft_canvas",
+  "loading_id": "loading",
+  "background": "#1b1c1f",
+  "background_dark": "#1b1c1f",
+  "icon_path": "M3 5h18v14H3Zm2 2v2h2V7Zm0 4v2h2v-2Zm0 4v2h2v-2Zm12-8v2h2V7Zm0 4v2h2v-2Zm0 4v2h2v-2ZM9.5 9v6l5-3Z",
+  "readme_features": "- **Edit in FilmCraft** appears in the Files action menu of every video (MP4, MOV, WebM, MKV, MXF, MPEG-TS) and FilmCraft project (.fcproj) you can read.\n- A video opens in a new project named after it. **Save** (Ctrl/⌘+S) stores the project in the folder you pick (next to the video by default), and later saves go to that file. Nextcloud keeps earlier states as file versions.\n- Opening a saved project fetches the media it uses from your Nextcloud. Media from elsewhere stays offline until you link it (File ▸ Link Media…).\n- Exports (renders) ask for a name and folder in your Nextcloud the first time.",
+  "readme_limitations": "- Media is downloaded into the browser before editing, so very large videos take a while to open and need enough memory.\n- Renders are made in the browser and uploaded when they finish; keep the tab open until then.",
+  "bridge_notes": "Files the parent sends keep its path under `/host` in FilmCraft's virtual file table, so a saved project refers to its media by their paths on the parent's side. Before a project opens, FilmCraft asks for the media it refers to that aren't there yet:\n\n| Message | Direction | Fields | Meaning |\n|---|---|---|---|\n| `filmcraft:need` | FilmCraft → parent | `paths` | Files an opened project refers to (its media). |\n| `filmcraft:file` | parent → FilmCraft | `path`, `blob` or `error` | One of them, or why it can't be had (that media stays offline). |\n\n`filmcraft:open` also carries `path` (the file's path on the parent's side) and sends a `Blob` rather than bytes. A saved project's `name` is the parent's path when it lives there; a new project or an export goes by its file name, and the parent asks where it goes. In host mode neither the demo project nor the recovery snapshot opens, and the parent guards leaving the page.",
+  "patch_extra": ", plus an `unbranded` build feature that leaves out the ArtCraft wordmark (modified builds must not carry the ArtCraft marks)",
+  "new_format_hint": "FilmCraft saves your edit as a project file; {name} stays as it is.",
+  "open_as_blob": true,
+  "static_frame": true,
+  "upstream_ref": "2ff3f5e266838700c292a35aaf762e3d4dcef980",
+  "upstream_version": "0.6.0",
+  "cargo_package": "filmcraft-web",
+  "wasm_file": "filmcraft_web.wasm",
+  "cargo_features": "unbranded",
+  "wasm_opt_level": "-O2",
+  "boot_after": "\tawait app.start('filmcraft_canvas')",
+  "extra_assets_sh": "# The audio worklet FilmCraft loads by a relative URL.\ncp \"$SRC/apps/filmcraft-web/web/audio-worklet.js\" \"$DEST/audio-worklet.js\"\n",
+  "web_extra_rows": [
+    "| `build.txt`, `build-<hash>/` | The current build: `frame.html` (the page in the editor's iframe, static so FilmCraft's relative URLs resolve in its folder), `boot.js`, the glue, the wasm and `audio-worklet.js` |"
+  ]
+}

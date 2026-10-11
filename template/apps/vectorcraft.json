@@ -1,0 +1,53 @@
+{
+  "id": "vectorcraft",
+  "name": "VectorCraft",
+  "kind": "vector illustration app",
+  "noun": "drawing",
+  "nouns": "drawings",
+  "file_types": "SVG, Illustrator, EPS or VectorCraft",
+  "summary": "Edit SVG and Illustrator files in Nextcloud with VectorCraft",
+  "description": "Open an SVG, Illustrator (.ai), EPS or VectorCraft file in Files with **Edit in VectorCraft** and work on it right in the browser: the pen and shape tools, Pathfinder, gradients and patterns, type on a path, artboards, symbols and layers.\n\n- **Save** writes the drawing straight back to Nextcloud in its own format, and Nextcloud keeps the previous state as a file version.\n- **Save As**, **Save a Copy** and **Export** (PDF, PNG, JPEG, WebP, SVG…) store a file in any folder you pick.\n- Read-only files open normally; saving offers a copy.\n- If someone else changes the file while you have it open, you choose whether to replace their version or save a copy.\n- Optionally, clicking a drawing in Files opens it in VectorCraft.",
+  "categories": [
+    "multimedia",
+    "files",
+    "integration"
+  ],
+  "mimes": [
+    "image/svg+xml",
+    "application/illustrator",
+    "application/postscript"
+  ],
+  "extensions": [
+    "svg",
+    "svgz",
+    "ai",
+    "ait",
+    "eps",
+    "vectorcraft",
+    "drawcraft",
+    "vctemplate",
+    "afdesign"
+  ],
+  "document_extensions": [
+    ".vectorcraft",
+    ".drawcraft",
+    ".svg",
+    ".svgz",
+    ".ai",
+    ".ait",
+    ".eps",
+    ".pdf"
+  ],
+  "canvas_id": "vectorcraft_canvas",
+  "background": "#262626",
+  "background_dark": "#262626",
+  "icon_path": "M12 2l6 8-3 11H9L6 10ZM11.6 3.5v7h.8v-7Zm.4 7.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 1 0 0-3Z",
+  "readme_features": "- **Edit in VectorCraft** appears in the Files action menu of every SVG, Illustrator (.ai), EPS and VectorCraft file you can read.\n- **Save** (Ctrl/⌘+S) writes the drawing back to Nextcloud in its own format, and Nextcloud keeps the previous state as a file version.\n- **Save As**, **Save a Copy** and **Export** (PDF, PNG, JPEG, WebP, SVG…) ask for a name and folder in your Nextcloud the first time; VectorCraft's own Save As dialog picks the name and format first.",
+  "readme_limitations": "- PDFs open in VectorCraft from its own File › Open; in Files, PDFs are left to PDF apps.",
+  "bridge_notes": "With `?host=parent`, what VectorCraft would download goes to the parent instead, and the parent guards leaving the page with unsaved changes. VectorCraft's own Save As dialog still picks the name and format.",
+  "upstream_ref": "c9236ed3f7cee38475dab7d89175a1831ef1fd94",
+  "upstream_version": "0.9.0",
+  "bindgen_flags": [
+    "--weak-refs"
+  ]
+}

@@ -147,3 +147,5 @@ git add -A && git commit -m "integration_pdfcraft 0.1.1" && git push
 ```
 
 The script replaces that app's archive and `CHANGELOG.md`, and rewrites `SHA256SUMS` and the table above. Never commit App Store signing keys (`*.key`) here.
+
+DeckCraft, CADCraft, PhotoCraft, VectorCraft, FilmCraft and EffectCraft are generated from one template, kept in [`template/`](template/README.md) with how to regenerate and release them.
