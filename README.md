@@ -11,6 +11,7 @@ Ready-to-install Nextcloud apps by [CyberFox-81](https://github.com/CyberFox-81)
 | **EffectCraft integration** (`integration_effectcraft`) | 0.1.1 | 33–35 | Make motion graphics and effects in Nextcloud with EffectCraft | [integration_effectcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_effectcraft/integration_effectcraft.tar.gz) · [changes](integration_effectcraft/CHANGELOG.md) |
 | **FilmCraft integration** (`integration_filmcraft`) | 0.1.1 | 33–35 | Edit videos in Nextcloud with the FilmCraft video editor | [integration_filmcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_filmcraft/integration_filmcraft.tar.gz) · [changes](integration_filmcraft/CHANGELOG.md) |
 | **GridCraft integration** (`integration_gridcraft`) | 0.1.0 | 33–35 | Edit Excel spreadsheets in Nextcloud with GridCraft | [integration_gridcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_gridcraft/integration_gridcraft.tar.gz) · [changes](integration_gridcraft/CHANGELOG.md) |
+| **LightCraft integration** (`integration_lightcraft`) | 0.1.0 | 33–35 | Develop photos and camera raws from Nextcloud with LightCraft | [integration_lightcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_lightcraft/integration_lightcraft.tar.gz) · [changes](integration_lightcraft/CHANGELOG.md) |
 | **PdfCraft integration** (`integration_pdfcraft`) | 0.1.2 | 33–35 | Edit PDFs in your Nextcloud with the PdfCraft PDF workbench | [integration_pdfcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_pdfcraft/integration_pdfcraft.tar.gz) · [changes](integration_pdfcraft/CHANGELOG.md) |
 | **PhotoCraft integration** (`integration_photocraft`) | 0.1.1 | 33–35 | Edit photos and Photoshop files in Nextcloud with PhotoCraft | [integration_photocraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_photocraft/integration_photocraft.tar.gz) · [changes](integration_photocraft/CHANGELOG.md) |
 | **SoundCraft integration** (`integration_soundcraft`) | 0.1.0 | 33–35 | Edit audio and SoundCraft sessions in Nextcloud with SoundCraft | [integration_soundcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_soundcraft/integration_soundcraft.tar.gz) · [changes](integration_soundcraft/CHANGELOG.md) |
@@ -97,6 +98,7 @@ Reload Files in the browser. The files each app handles get an **Edit in …** e
 | GridCraft | Excel (.xlsx, .xlsm, .xlsb, .xltx), OpenDocument spreadsheets (.ods), CSV, TSV |
 | SoundCraft | Audio (WAV, AIFF, FLAC, MP3, Ogg Vorbis, AAC/M4A, CAF), SoundCraft sessions (.scraft) |
 | DesignCraft | DesignCraft documents (.designcraft), IDML packages (.idml) |
+| LightCraft | Photos (JPEG, PNG, TIFF, WebP, GIF, BMP, JPEG XL) and camera raws (DNG, CR2, NEF, ARW) |
 
 A file that several apps open lists each of them. `occ app:list | grep integration_` lists the installed apps and their versions.
 
