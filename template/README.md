@@ -1,6 +1,6 @@
 # Craft integration template
 
-The DeckCraft, CADCraft, PhotoCraft, VectorCraft, FilmCraft, EffectCraft and GridCraft Nextcloud apps are generated from this template, so a fix to the editor page or the Files action reaches all of them. (PdfCraft and WordCraft have their own repositories and came first; the template grew out of the WordCraft app.)
+The DeckCraft, CADCraft, PhotoCraft, VectorCraft, FilmCraft, EffectCraft, GridCraft and SoundCraft Nextcloud apps are generated from this template, so a fix to the editor page or the Files action reaches all of them. (PdfCraft and WordCraft have their own repositories and came first; the template grew out of the WordCraft app.)
 
 - `app/` is the Nextcloud app with `{{PLACEHOLDERS}}`: the editor page (`src/editor.ts`), the Files action (`src/files.ts`), the PHP controllers, the build and signing scripts, and the README.
 - `apps/<id>.json` says what differs per app: its name, the file types it opens, its icon (an original 24×24 path), the canvas it draws in, how its browser build is made, and the README and App Store texts.

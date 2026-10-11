@@ -3,7 +3,7 @@
   "name": "SoundCraft",
   "kind": "audio workstation",
   "noun": "session",
-  "nouns": "sessions",
+  "nouns": "audio files and sessions",
   "file_types": "audio or SoundCraft",
   "summary": "Edit audio and SoundCraft sessions in Nextcloud with SoundCraft",
   "description": "Open an audio file (WAV, AIFF, FLAC, MP3, Ogg Vorbis, AAC/M4A, CAF) or a SoundCraft session in Files with **Edit in SoundCraft** and work on it right in the browser, the way you know from a studio workstation: tracks, clips, edits and fades, the mixer with sends and plug-ins, automation, MIDI and bouncing.\n\n- An audio file opens as a new session of the same name. **Save** stores the session next to it (a .scraft file, with its audio in an *Audio Files* folder), and later saves go there. Nextcloud keeps the previous state of a session as a file version.\n- **Bounce Mix** and the exports store a file in the folder you type, in your Nextcloud.\n- Reopening a session loads its audio from your Nextcloud.\n- Read-only files open normally; saving offers a copy.\n- If someone else changes the session while you have it open, you choose whether to replace their version or save a copy.\n- Optionally, clicking an audio file or a session in Files opens it in SoundCraft.",
