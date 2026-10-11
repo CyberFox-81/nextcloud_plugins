@@ -1,0 +1,51 @@
+{
+  "id": "gridcraft",
+  "name": "GridCraft",
+  "kind": "spreadsheet app",
+  "noun": "workbook",
+  "nouns": "workbooks",
+  "file_types": "Excel, OpenDocument or CSV",
+  "summary": "Edit Excel spreadsheets in Nextcloud with GridCraft",
+  "description": "Open an Excel workbook (.xlsx, .xlsm, .xlsb), an OpenDocument spreadsheet (.ods) or a CSV file in Files with **Edit in GridCraft** and work on it right in the browser: formulas and functions, formatting, tables, charts, PivotTables, sorting and filtering, notes and comments.\n\n- **Save** writes an .xlsx workbook straight back to Nextcloud, and Nextcloud keeps the previous state as a file version. Other formats are saved as a new .xlsx file next to the original (you pick the name and folder).\n- **Export as PDF** stores a file in any folder you pick.\n- Read-only files open normally; saving offers a copy.\n- If someone else changes the file while you have it open, you choose whether to replace their version or save a copy.\n- Optionally, clicking a spreadsheet in Files opens it in GridCraft.",
+  "categories": [
+    "office",
+    "files",
+    "integration"
+  ],
+  "mimes": [
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.template",
+    "application/vnd.ms-excel.sheet.macroEnabled.12",
+    "application/vnd.ms-excel.template.macroEnabled.12",
+    "application/vnd.ms-excel.sheet.binary.macroEnabled.12",
+    "application/vnd.oasis.opendocument.spreadsheet",
+    "text/csv",
+    "text/tab-separated-values"
+  ],
+  "extensions": [
+    "xlsx",
+    "xltx",
+    "xlsm",
+    "xltm",
+    "xlsb",
+    "ods",
+    "csv",
+    "tsv"
+  ],
+  "document_extensions": [
+    ".xlsx"
+  ],
+  "canvas_id": "gridcraft_canvas",
+  "background": "#f3f3f3",
+  "background_dark": "#292929",
+  "icon_path": "M3 3h18v18H3Zm2 2v3h4V5Zm6 0v3h8V5ZM5 10v4h4v-4Zm6 0v4h8v-4ZM5 16v3h4v-3Zm6 0v3h8v-3Z",
+  "readme_features": "- **Edit in GridCraft** appears in the Files action menu of every Excel (.xlsx, .xlsm, .xlsb, .xltx, .xltm), OpenDocument (.ods), CSV and TSV spreadsheet you can read.\n- **Save** (Ctrl/⌘+S) writes an .xlsx workbook back to Nextcloud, and Nextcloud keeps the previous state as a file version. A workbook opened from another format is saved as .xlsx: the first time, you pick the name and folder (it's offered next to the original), and later saves go to that file.\n- **Export as PDF** asks for a name and folder in your Nextcloud the first time.",
+  "readme_limitations": "- In the browser GridCraft saves workbooks as .xlsx. A spreadsheet in another format (.xlsm, .xlsb, .xltx, .xltm, .ods, CSV, TSV) is saved as a new .xlsx file and the original stays as it is.\n- GridCraft doesn't run or keep VBA macros: it tells you when it drops them while opening a file.\n- In the browser, **Save As** stores the workbook like **Save**, and **Share › Save a Copy** isn't available; to keep a copy under another name, copy the file in Files first.",
+  "new_format_hint": "GridCraft saves {name} as an Excel workbook (.xlsx), so it goes to a new file and the original stays as it is.",
+  "bridge_notes": "With `?host=parent`, GridCraft starts with an empty workbook instead of a sample, an optional `&author=<name>` signs the user's notes and comments, and the parent guards leaving the page with unsaved changes. An .xlsx workbook handed to the parent counts as saved under that name.",
+  "upstream_ref": "9f896c1249f40d18bf182199dc03042959be5f3f",
+  "upstream_version": "0.5.0",
+  "bindgen_flags": [
+    "--weak-refs"
+  ]
+}

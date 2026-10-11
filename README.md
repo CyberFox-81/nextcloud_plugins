@@ -9,6 +9,7 @@ Ready-to-install Nextcloud apps by [CyberFox-81](https://github.com/CyberFox-81)
 | **DeckCraft integration** (`integration_deckcraft`) | 0.1.0 | 33–35 | Edit PowerPoint presentations in Nextcloud with DeckCraft | [integration_deckcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_deckcraft/integration_deckcraft.tar.gz) · [changes](integration_deckcraft/CHANGELOG.md) |
 | **EffectCraft integration** (`integration_effectcraft`) | 0.1.0 | 33–35 | Make motion graphics and effects in Nextcloud with EffectCraft | [integration_effectcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_effectcraft/integration_effectcraft.tar.gz) · [changes](integration_effectcraft/CHANGELOG.md) |
 | **FilmCraft integration** (`integration_filmcraft`) | 0.1.0 | 33–35 | Edit videos in Nextcloud with the FilmCraft video editor | [integration_filmcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_filmcraft/integration_filmcraft.tar.gz) · [changes](integration_filmcraft/CHANGELOG.md) |
+| **GridCraft integration** (`integration_gridcraft`) | 0.1.0 | 33–35 | Edit Excel spreadsheets in Nextcloud with GridCraft | [integration_gridcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_gridcraft/integration_gridcraft.tar.gz) · [changes](integration_gridcraft/CHANGELOG.md) |
 | **PdfCraft integration** (`integration_pdfcraft`) | 0.1.1 | 33–35 | Edit PDFs in your Nextcloud with the PdfCraft PDF workbench | [integration_pdfcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_pdfcraft/integration_pdfcraft.tar.gz) · [changes](integration_pdfcraft/CHANGELOG.md) |
 | **PhotoCraft integration** (`integration_photocraft`) | 0.1.0 | 33–35 | Edit photos and Photoshop files in Nextcloud with PhotoCraft | [integration_photocraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_photocraft/integration_photocraft.tar.gz) · [changes](integration_photocraft/CHANGELOG.md) |
 | **VectorCraft integration** (`integration_vectorcraft`) | 0.1.0 | 33–35 | Edit SVG and Illustrator files in Nextcloud with VectorCraft | [integration_vectorcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_vectorcraft/integration_vectorcraft.tar.gz) · [changes](integration_vectorcraft/CHANGELOG.md) |
@@ -91,6 +92,7 @@ Reload Files in the browser. The files each app handles get an **Edit in …** e
 | VectorCraft | SVG, Illustrator (.ai), EPS, VectorCraft |
 | FilmCraft | Videos (MP4, MOV, WebM, MKV, MXF, MPEG-TS), FilmCraft projects |
 | EffectCraft | EffectCraft projects, videos (MP4, MOV, WebM) |
+| GridCraft | Excel (.xlsx, .xlsm, .xlsb, .xltx), OpenDocument spreadsheets (.ods), CSV, TSV |
 
 A file that several apps open lists each of them. `occ app:list | grep integration_` lists the installed apps and their versions.
 
