@@ -7,13 +7,14 @@ Ready-to-install Nextcloud apps by [CyberFox-81](https://github.com/CyberFox-81)
 |---|---|---|---|---|
 | **CADCraft integration** (`integration_cadcraft`) | 0.1.0 | 33–35 | Open and edit DXF and DWG drawings in Nextcloud with CADCraft | [integration_cadcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_cadcraft/integration_cadcraft.tar.gz) · [changes](integration_cadcraft/CHANGELOG.md) |
 | **DeckCraft integration** (`integration_deckcraft`) | 0.1.0 | 33–35 | Edit PowerPoint presentations in Nextcloud with DeckCraft | [integration_deckcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_deckcraft/integration_deckcraft.tar.gz) · [changes](integration_deckcraft/CHANGELOG.md) |
+| **FilmCraft integration** (`integration_filmcraft`) | 0.1.0 | 33–35 | Edit videos in Nextcloud with the FilmCraft video editor | [integration_filmcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_filmcraft/integration_filmcraft.tar.gz) · [changes](integration_filmcraft/CHANGELOG.md) |
 | **PdfCraft integration** (`integration_pdfcraft`) | 0.1.1 | 33–35 | Edit PDFs in your Nextcloud with the PdfCraft PDF workbench | [integration_pdfcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_pdfcraft/integration_pdfcraft.tar.gz) · [changes](integration_pdfcraft/CHANGELOG.md) |
 | **PhotoCraft integration** (`integration_photocraft`) | 0.1.0 | 33–35 | Edit photos and Photoshop files in Nextcloud with PhotoCraft | [integration_photocraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_photocraft/integration_photocraft.tar.gz) · [changes](integration_photocraft/CHANGELOG.md) |
 | **VectorCraft integration** (`integration_vectorcraft`) | 0.1.0 | 33–35 | Edit SVG and Illustrator files in Nextcloud with VectorCraft | [integration_vectorcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_vectorcraft/integration_vectorcraft.tar.gz) · [changes](integration_vectorcraft/CHANGELOG.md) |
 | **WordCraft integration** (`integration_wordcraft`) | 0.1.0 | 33–35 | Write and edit Word and OpenDocument files in Nextcloud with the WordCraft word processor | [integration_wordcraft.tar.gz](https://github.com/CyberFox-81/nextcloud_plugins/raw/main/integration_wordcraft/integration_wordcraft.tar.gz) · [changes](integration_wordcraft/CHANGELOG.md) |
 <!-- plugins:end -->
 
-Source code: [integration_pdfcraft](https://github.com/CyberFox-81/integration_pdfcraft) · integration_wordcraft (repository coming soon). Checksums: [SHA256SUMS](SHA256SUMS).
+Source code: [integration_pdfcraft](https://github.com/CyberFox-81/integration_pdfcraft); the other apps' repositories are coming soon. Checksums: [SHA256SUMS](SHA256SUMS).
 
 ## Before you start
 
@@ -77,7 +78,20 @@ If your Nextcloud has no `custom_apps` folder, use `apps` instead.
 
 ### Check it worked
 
-Reload Files in the browser. PDFs now have **Edit in PdfCraft** in their **⋯** menu, and Word, ODT and RTF documents have **Edit in WordCraft**. `occ app:list | grep integration_` lists the apps and their versions.
+Reload Files in the browser. The files each app handles get an **Edit in …** entry in their **⋯** menu:
+
+| App | Files |
+|---|---|
+| PdfCraft | PDF |
+| WordCraft | Word (.docx, .doc…), OpenDocument text, RTF |
+| DeckCraft | PowerPoint (.pptx, .potx, .ppsx), DeckCraft |
+| CADCraft | DXF, DWG |
+| PhotoCraft | PNG, JPEG, TIFF, WebP, HEIC, camera raw, Photoshop (PSD, PSB), PhotoCraft… |
+| VectorCraft | SVG, Illustrator (.ai), EPS, VectorCraft |
+| FilmCraft | Videos (MP4, MOV, WebM, MKV, MXF, MPEG-TS), FilmCraft projects |
+| EffectCraft | EffectCraft projects, videos (MP4, MOV, WebM) |
+
+A file that several apps open lists each of them. `occ app:list | grep integration_` lists the installed apps and their versions.
 
 ### Optional: check the download
 
@@ -115,6 +129,7 @@ This disables the app and deletes its folder. Your files in Nextcloud are not to
 - **"App … cannot be installed because it is not compatible with this version":** these apps support Nextcloud 33–35.
 - **The editor stays on "Loading…" or says it couldn't start:** the browser needs WebGL2 or WebGPU (check hardware acceleration is on). If the browser console shows a wasm MIME type error, the web server isn't sending `application/wasm` for `.wasm` files (see [Before you start](#before-you-start)).
 - **Two "Edit in PdfCraft" entries:** an early test build used the app id `pdfcraft`. Remove it with `occ app:remove pdfcraft`.
+- **Videos or projects open slowly:** FilmCraft and EffectCraft load the media into the browser first, so large files take a while and need memory; a render or saved project is uploaded when it finishes, so keep the tab open until then.
 - **Code-integrity warnings:** none are expected. These archives aren't signed for the App Store yet, and Nextcloud only checks apps that ship a signature.
 
 ## Licenses
