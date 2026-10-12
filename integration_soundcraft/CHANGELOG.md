@@ -4,6 +4,12 @@
 -->
 # Changelog
 
+## 0.1.1 – 2026-10-11
+
+- SoundCraft 0.5.0 (commit acb08ff), which saves sessions in the browser as one bundle file (.scraftz). Save now stores the session and its audio in a bundle instead of a .scraft file with an Audio Files folder; sessions saved that way (by 0.1.0, or by SoundCraft on a computer and synced to Nextcloud) still open with their audio, and save as a bundle next to them.
+- The embedding bridge only touches SoundCraft's web shell now: it builds on SoundCraft's own browser file handling, so the engine changes of 0.1.0 are gone.
+- File › Import reads audio and MIDI from your computer.
+
 ## 0.1.0 – 2026-10-10
 
 First release.
