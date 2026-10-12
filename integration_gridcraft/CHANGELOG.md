@@ -4,6 +4,10 @@
 -->
 # Changelog
 
+## 0.1.2 – 2026-10-12
+
+- GridCraft 0.6.1 (commit fc45b7f): the latest GridCraft, with the embedding bridge rebased onto it
+
 ## 0.1.1 – 2026-10-11
 
 - GridCraft 0.5.0 (commit 3926d21): the latest GridCraft, with the embedding bridge rebased onto it
