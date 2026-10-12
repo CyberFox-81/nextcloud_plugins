@@ -1,5 +1,6 @@
 {
   "id": "deckcraft",
+  "version": "0.1.2",
   "name": "DeckCraft",
   "kind": "presentation app",
   "noun": "presentation",
@@ -7,14 +8,30 @@
   "file_types": "PowerPoint or DeckCraft",
   "summary": "Edit PowerPoint presentations in Nextcloud with DeckCraft",
   "description": "Open a PowerPoint (.pptx, .potx, .ppsx) or DeckCraft presentation in Files with **Edit in DeckCraft** and work on it right in the browser: themes, layouts, shapes, pictures, tables, charts, transitions, animations, speaker notes and the slide show.\n\n- **Save** stores the presentation in DeckCraft's own format next to the original the first time (you pick the name and folder), and to that file from then on. **File › Export › PowerPoint** writes the .pptx back, and Nextcloud keeps the previous state as a file version.\n- **Export** (PDF, PNG, JPEG, outline) stores a file in any folder you pick.\n- Read-only files open normally; saving offers a copy.\n- If someone else changes the file while you have it open, you choose whether to replace their version or save a copy.\n- Optionally, clicking a presentation in Files opens it in DeckCraft.",
-  "categories": ["office", "files", "integration"],
+  "categories": [
+    "office",
+    "files",
+    "integration"
+  ],
   "mimes": [
     "application/vnd.openxmlformats-officedocument.presentationml.presentation",
     "application/vnd.openxmlformats-officedocument.presentationml.template",
     "application/vnd.openxmlformats-officedocument.presentationml.slideshow"
   ],
-  "extensions": ["pptx", "potx", "ppsx", "deckcraft", "slidecraft"],
-  "document_extensions": [".deckcraft", ".slidecraft", ".pptx", ".potx", ".ppsx"],
+  "extensions": [
+    "pptx",
+    "potx",
+    "ppsx",
+    "deckcraft",
+    "slidecraft"
+  ],
+  "document_extensions": [
+    ".deckcraft",
+    ".slidecraft",
+    ".pptx",
+    ".potx",
+    ".ppsx"
+  ],
   "canvas_id": "deckcraft_canvas",
   "background": "#262626",
   "background_dark": "#1e1e20",
@@ -22,7 +39,9 @@
   "readme_features": "- **Edit in DeckCraft** appears in the Files action menu of every PowerPoint (.pptx, .potx, .ppsx) and DeckCraft (.deckcraft) presentation you can read.\n- **Save** (Ctrl/⌘+S) stores the presentation in DeckCraft's own format: the first time, you pick the name and folder (it's offered next to the original), and later saves go to that file. **File › Export › PowerPoint** writes the .pptx back under its own name. Nextcloud keeps the previous state of a file as a version.\n- **Export** (PDF, PNG, JPEG, outline) asks for a name and folder in your Nextcloud the first time.",
   "readme_limitations": "- In the browser DeckCraft saves in its own format (.deckcraft); PowerPoint files are written with **File › Export › PowerPoint**.",
   "bridge_notes": "With `?host=parent`, DeckCraft starts without the sample deck, an optional `&author=<name>` signs the user's comments, and the parent guards leaving the page with unsaved changes. A presentation handed to the parent (DeckCraft, PowerPoint) counts as saved.",
-  "upstream_ref": "a98df49b21632d69a3da994d35df1ea91dab41af",
-  "upstream_version": "0.5.0",
-  "bindgen_flags": ["--weak-refs"]
+  "upstream_ref": "688c7ef592c901ca4541c25e210c1b302e4dc066",
+  "upstream_version": "0.6.1",
+  "bindgen_flags": [
+    "--weak-refs"
+  ]
 }

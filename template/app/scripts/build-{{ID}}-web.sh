@@ -35,9 +35,12 @@ if [ ! -e "$SRC/.git" ]; then
 fi
 
 if grep -rq '{{ID}}:ready' "$SRC/apps/{{ID}}-web/src"; then
-	echo "bridge patch already applied"
-else
+	echo "{{NAME}} has the embedding bridge"
+elif [ -s "$PATCH" ]; then
 	git -C "$SRC" apply "$PATCH"
+else
+	echo "error: this {{NAME}} has no embedding bridge, and there is no patch to add it" >&2
+	exit 1
 fi
 
 cargo_args=(build --profile {{CARGO_PROFILE}} -p {{CARGO_PACKAGE}} --target wasm32-unknown-unknown{{CARGO_FEATURES_ARGS}})

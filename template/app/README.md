@@ -46,13 +46,13 @@ Files ── "Edit in {{NAME}}" ──▶ /apps/{{APP_ID}}/edit/{fileId}   (src/
 
 The editor page downloads the file over WebDAV and passes it to {{NAME}} with `postMessage`. When you save, {{NAME}} passes the bytes back and the page uploads them with `If-Match`, so a newer version on the server is never overwritten without asking. A save in a format the opened file isn't in, and an export, ask for a name and folder with Nextcloud's own folder picker the first time; later saves under the same name go to the same file. The frame page is the only one whose Content Security Policy allows compiling WebAssembly.
 
-{{NAME}}'s browser build saves by downloading a file. `patches/{{ID}}-nextcloud.patch` adds an opt-in embedding bridge (`?host=parent`) to its web shell{{PATCH_EXTRA}}; the protocol is in [web/README.md](web/README.md). It is meant to be proposed upstream, so a future official {{NAME}} build can be used as is.
+{{BRIDGE_SOURCE}}
 
 ## Build from source
 
 ```sh
 make js      # npm ci && vite build → js/
-make wasm    # clone {{NAME}}, apply the patch, build → web/   (needs Rust, see below)
+make wasm    # clone {{NAME}}{{PATCH_STEP}}, build → web/   (needs Rust, see below)
 make dist    # → build/dist/{{APP_ID}}-<version>.tar.gz
 ```
 

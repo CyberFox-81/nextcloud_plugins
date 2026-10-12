@@ -1,6 +1,6 @@
 {
   "id": "cadcraft",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "name": "CADCraft",
   "kind": "drafting app",
   "noun": "drawing",
@@ -35,9 +35,12 @@
   "readme_features": "- **Edit in CADCraft** appears in the Files action menu of every DXF and DWG drawing you can read.\n- **Save** (QSAVE, Ctrl/⌘+S) writes the drawing back to Nextcloud in the format it was opened in, and Nextcloud keeps the previous state as a file version.\n- Exports and plots (PDF, PNG, SVG), and saves under another name, ask for a name and folder in your Nextcloud the first time.",
   "readme_limitations": "- DWG support follows CADCraft's own (see its file-format notes); if a DWG doesn't round-trip, save it as DXF.",
   "bridge_notes": "With `?host=parent`, CADCraft starts on the Start tab rather than an empty Drawing1, the files it saves go to the parent instead of the browser's downloads (the engine's delivery hook), and the parent guards leaving the page with unsaved changes.",
-  "upstream_ref": "699dd1aeca1dba018931d2eb95e92c0cf2033bbd",
-  "upstream_version": "0.5.0",
+  "upstream_ref": "00c7613f1af3c73f7157fa91d9fe2635c6f23c06",
+  "upstream_version": "0.6.2",
   "bindgen_flags": [
     "--weak-refs"
-  ]
+  ],
+  "bridge_upstream": {
+    "pr": 509
+  }
 }

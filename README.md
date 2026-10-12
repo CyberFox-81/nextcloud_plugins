@@ -96,7 +96,7 @@ Reload Files in the browser. The files each app handles get an **Edit in …** e
 | FilmCraft | Videos (MP4, MOV, WebM, MKV, MXF, MPEG-TS), FilmCraft projects |
 | EffectCraft | EffectCraft projects, videos (MP4, MOV, WebM) |
 | GridCraft | Excel (.xlsx, .xlsm, .xlsb, .xltx), OpenDocument spreadsheets (.ods), CSV, TSV |
-| SoundCraft | Audio (WAV, AIFF, FLAC, MP3, Ogg Vorbis, AAC/M4A, CAF), SoundCraft sessions (.scraft) |
+| SoundCraft | Audio (WAV, AIFF, FLAC, MP3, Ogg Vorbis, AAC/M4A, CAF), SoundCraft sessions (.scraft) and session bundles (.scraftz) |
 | DesignCraft | DesignCraft documents (.designcraft), IDML packages (.idml) |
 | LightCraft | Photos (JPEG, PNG, TIFF, WebP, GIF, BMP, JPEG XL) and camera raws (DNG, CR2, NEF, ARW) |
 

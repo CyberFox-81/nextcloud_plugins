@@ -6,7 +6,7 @@ The DeckCraft, CADCraft, PhotoCraft, VectorCraft, FilmCraft, EffectCraft, GridCr
 - `apps/<id>.json` says what differs per app: its name, the file types it opens, its icon (an original 24×24 path), the canvas it draws in, how its browser build is made, and the README and App Store texts.
 - `generate.py apps/<id>.json ../nextcloud-<id>` writes the app. It rewrites the template's files and leaves `patches/`, `screenshots/`, the build output in `web/` and `js/`, and an existing `CHANGELOG.md` alone.
 
-Each app also needs a patch to its upstream project (`patches/<id>-nextcloud.patch` in the app): the embedding bridge in the project's web shell, and for FilmCraft, EffectCraft and DesignCraft an `unbranded` feature that leaves out the ArtCraft marks. The bridges are on the `nextcloud-embedding-bridge` branch of each fork (github.com/CyberFox-81/<id>).
+Each app also needs a patch to its upstream project (`patches/<id>-nextcloud.patch` in the app): the embedding bridge in the project's web shell, and for FilmCraft, EffectCraft and DesignCraft an `unbranded` feature that leaves out the ArtCraft marks. The bridges are on the `nextcloud-embedding-bridge` branch of each fork (github.com/CyberFox-81/<id>). Once a project merges the bridge (CADCraft did in storytold/cadcraft#509), its config says so with `"bridge_upstream": {"pr": <number>}`: the app then builds the official project as is, with no patch, and its README says where the bridge comes from.
 
 Two layouts for the page in the editor's iframe:
 

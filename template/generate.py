@@ -53,6 +53,8 @@ def values(cfg: dict) -> dict:
         "README_FEATURES": cfg["readme_features"].strip(),
         "README_LIMITATIONS": cfg.get("readme_limitations", "").strip() + ("\n" if cfg.get("readme_limitations") else ""),
         "PATCH_EXTRA": cfg.get("patch_extra", ""),
+        "BRIDGE_SOURCE": bridge_source(cfg),
+        "PATCH_STEP": "" if cfg.get("bridge_upstream") else ", apply the patch",
         "BINDGEN_VERSION": cfg.get("bindgen_version", "0.2.129"),
         "DEFAULT_REF": cfg["upstream_ref"],
         "UPSTREAM_SHORT": cfg["upstream_ref"][:7],
@@ -181,6 +183,20 @@ def fill(text: str, v: dict, where: str) -> str:
     if left:
         sys.exit(f"error: {where}: unknown placeholders {sorted(left)}")
     return text
+
+
+def bridge_source(cfg: dict) -> str:
+    """The README's sentence on where the embedding bridge comes from."""
+    up = cfg.get("bridge_upstream")
+    if up:
+        pr = up["pr"]
+        return (f"{{{{NAME}}}} has the opt-in embedding bridge (`?host=parent`) this app uses since "
+                f"[storytold/{{{{ID}}}}#{pr}](https://github.com/storytold/{{{{ID}}}}/pull/{pr}), so the official "
+                f"{{{{NAME}}}} build is used as is; the protocol is in [web/README.md](web/README.md).")
+    return ("{{NAME}}'s browser build saves by downloading a file. `patches/{{ID}}-nextcloud.patch` adds an opt-in "
+            "embedding bridge (`?host=parent`) to its web shell{{PATCH_EXTRA}}; the protocol is in "
+            "[web/README.md](web/README.md). It is meant to be proposed upstream, so a future official {{NAME}} build "
+            "can be used as is.")
 
 
 def main() -> None:
