@@ -4,6 +4,10 @@
 -->
 # Changelog
 
+## 0.1.3 – 2026-10-12
+
+- FilmCraft 0.7.2 (commit 71438c6): the latest FilmCraft, with the embedding bridge rebased onto it
+
 ## 0.1.2 – 2026-10-11
 
 - FilmCraft 0.6.0 (commit 3fdaa81): the latest FilmCraft, with the embedding bridge rebased onto it
