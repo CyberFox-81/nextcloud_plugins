@@ -4,6 +4,11 @@
 -->
 # Changelog
 
+## 0.1.1 – 2026-10-11
+
+- GridCraft 0.5.0 (commit 3926d21): the latest GridCraft, with the embedding bridge rebased onto it
+- Opens legacy Excel workbooks (.xls) too; like the other formats, they're saved as a new .xlsx file
+
 ## 0.1.0 – 2026-10-10
 
 First release.
