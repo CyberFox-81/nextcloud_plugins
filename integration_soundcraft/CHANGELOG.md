@@ -4,6 +4,10 @@
 -->
 # Changelog
 
+## 0.1.3 – 2026-10-14
+
+- SoundCraft 0.7.0 (commit 3a28a65): the latest SoundCraft, with the embedding bridge rebased onto it
+
 ## 0.1.2 – 2026-10-12
 
 - SoundCraft 0.6.1 (commit 6cf896e): the latest SoundCraft, with the embedding bridge rebased onto it
