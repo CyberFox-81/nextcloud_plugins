@@ -1,6 +1,6 @@
 {
   "id": "deckcraft",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "name": "DeckCraft",
   "kind": "presentation app",
   "noun": "presentation",
@@ -39,8 +39,8 @@
   "readme_features": "- **Edit in DeckCraft** appears in the Files action menu of every PowerPoint (.pptx, .potx, .ppsx) and DeckCraft (.deckcraft) presentation you can read.\n- **Save** (Ctrl/⌘+S) stores the presentation in DeckCraft's own format: the first time, you pick the name and folder (it's offered next to the original), and later saves go to that file. **File › Export › PowerPoint** writes the .pptx back under its own name. Nextcloud keeps the previous state of a file as a version.\n- **Export** (PDF, PNG, JPEG, outline) asks for a name and folder in your Nextcloud the first time.",
   "readme_limitations": "- In the browser DeckCraft saves in its own format (.deckcraft); PowerPoint files are written with **File › Export › PowerPoint**.",
   "bridge_notes": "With `?host=parent`, DeckCraft starts without the sample deck, an optional `&author=<name>` signs the user's comments, and the parent guards leaving the page with unsaved changes. A presentation handed to the parent (DeckCraft, PowerPoint) counts as saved.",
-  "upstream_ref": "688c7ef592c901ca4541c25e210c1b302e4dc066",
-  "upstream_version": "0.6.1",
+  "upstream_ref": "8d3e4a630f3657732fddcb9a4f20001e37c5b847",
+  "upstream_version": "0.7.0",
   "bindgen_flags": [
     "--weak-refs"
   ]
