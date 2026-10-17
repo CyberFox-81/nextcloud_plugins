@@ -4,6 +4,10 @@
 -->
 # Changelog
 
+## 0.1.5 – 2026-10-16
+
+- VectorCraft 0.12.0 (commit 8bc6532): the latest VectorCraft, with the embedding bridge rebased onto it
+
 ## 0.1.4 – 2026-10-14
 
 - VectorCraft 0.11.0 (commit 0a33cff): the latest VectorCraft, with the embedding bridge rebased onto it
