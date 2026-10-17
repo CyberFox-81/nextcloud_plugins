@@ -1,6 +1,6 @@
 {
   "id": "gridcraft",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "name": "GridCraft",
   "kind": "spreadsheet app",
   "noun": "workbook",
@@ -46,7 +46,7 @@
   "readme_limitations": "- In the browser GridCraft saves workbooks as .xlsx. A spreadsheet in another format (.xls, .xlsm, .xlsb, .xltx, .xltm, .ods, CSV, TSV) is saved as a new .xlsx file and the original stays as it is.\n- GridCraft doesn't run or keep VBA macros: it tells you when it drops them while opening a file.\n- In the browser, **Save As** stores the workbook like **Save**, and **Share › Save a Copy** isn't available; to keep a copy under another name, copy the file in Files first.",
   "new_format_hint": "GridCraft saves {name} as an Excel workbook (.xlsx), so it goes to a new file and the original stays as it is.",
   "bridge_notes": "With `?host=parent`, GridCraft starts with an empty workbook instead of a sample, an optional `&author=<name>` signs the user's notes and comments, and the parent guards leaving the page with unsaved changes. An .xlsx workbook handed to the parent counts as saved under that name.",
-  "upstream_ref": "d9d09f0baa912e88c5111107903fc8c640214b57",
+  "upstream_ref": "f1894c6da64d4326022ae644c767581816a23c2c",
   "upstream_version": "0.7.0",
   "bindgen_flags": [
     "--weak-refs"

@@ -1,6 +1,6 @@
 {
   "id": "designcraft",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "name": "DesignCraft",
   "kind": "page layout app",
   "noun": "document",
@@ -34,7 +34,7 @@
   "bridge_notes": "With `?host=parent`, DesignCraft starts without the sample document, and the parent guards leaving the page with unsaved changes. Save hands the parent a `.designcraft` document and marks it saved, as DesignCraft's web build does after a download.",
   "patch_extra": ", plus an `unbranded` build feature that leaves out the ArtCraft mark (modified builds must not carry the ArtCraft marks)",
   "cargo_features": "unbranded",
-  "upstream_ref": "d07cbbe94c2762865eaefeff4ebfd1dbada180a0",
+  "upstream_ref": "b17efb2ddfcd3be55716e4dad66453960f45d394",
   "upstream_version": "0.8.0",
   "bindgen_flags": [
     "--weak-refs"
