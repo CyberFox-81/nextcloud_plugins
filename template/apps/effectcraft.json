@@ -1,6 +1,6 @@
 {
   "id": "effectcraft",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "name": "EffectCraft",
   "kind": "motion graphics and visual effects app",
   "noun": "project",
@@ -38,8 +38,8 @@
   "new_format_hint": "EffectCraft saves your work as a project file; {name} stays as it is.",
   "open_as_blob": true,
   "static_frame": true,
-  "upstream_ref": "8f02f52a44a4b1ea807d8824b92301b96f896a06",
-  "upstream_version": "0.10.0",
+  "upstream_ref": "cee4c16c8ad53621aaf25c037564e77a2dd37090",
+  "upstream_version": "0.14.0",
   "cargo_package": "effectcraft-web",
   "wasm_file": "effectcraft_web.wasm",
   "bindgen_out_name": "effectcraft_web",

@@ -1,6 +1,6 @@
 {
   "id": "filmcraft",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "name": "FilmCraft",
   "kind": "video editor",
   "noun": "project",
@@ -49,8 +49,8 @@
   "new_format_hint": "FilmCraft saves your edit as a project file; {name} stays as it is.",
   "open_as_blob": true,
   "static_frame": true,
-  "upstream_ref": "09aaf9bf15d510eda1c413c0ccabb1d7e08b41c5",
-  "upstream_version": "0.8.0",
+  "upstream_ref": "e8253fff50b45ce2b2f4c0dfc98585b47d0d7049",
+  "upstream_version": "0.10.0",
   "cargo_package": "filmcraft-web",
   "wasm_file": "filmcraft_web.wasm",
   "cargo_features": "unbranded",
