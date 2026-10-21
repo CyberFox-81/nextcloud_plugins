@@ -4,6 +4,10 @@
 -->
 # Changelog
 
+## 0.1.6 – 2026-10-21
+
+- EffectCraft 0.14.0 (commit cee4c16): the latest EffectCraft, with the embedding bridge rebased onto it
+
 ## 0.1.5 – 2026-10-16
 
 - EffectCraft 0.10.0 (commit 8f02f52): the latest EffectCraft, with the embedding bridge rebased onto it
