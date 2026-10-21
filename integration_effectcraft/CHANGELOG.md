@@ -4,6 +4,11 @@
 -->
 # Changelog
 
+## 0.1.7 – 2026-10-21
+
+- EffectCraft 0.14.0 (commit cee4c16): the latest EffectCraft, with the embedding bridge rebased onto it
+- Fixes 0.1.6, where a project's footage showed black and rendered black: EffectCraft's browser version took every footage path stored in a project for a missing file (a fix for EffectCraft itself)
+
 ## 0.1.6 – 2026-10-21
 
 - EffectCraft 0.14.0 (commit cee4c16): the latest EffectCraft, with the embedding bridge rebased onto it
