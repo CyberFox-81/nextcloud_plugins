@@ -4,6 +4,10 @@
 -->
 # Changelog
 
+## 0.1.4 – 2026-10-21
+
+- LightCraft 0.11.0 (commit 3dc3b95): the latest LightCraft, with the embedding bridge rebased onto it
+
 ## 0.1.3 – 2026-10-16
 
 - LightCraft 0.8.0 (commit f34c7a8): the latest LightCraft, with the embedding bridge rebased onto it
