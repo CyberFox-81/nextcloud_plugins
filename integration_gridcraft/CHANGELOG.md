@@ -4,6 +4,10 @@
 -->
 # Changelog
 
+## 0.1.6 – 2026-10-27
+
+- GridCraft 0.12.1 (commit 89ac453), which includes the embedding bridge this app uses (storytold/gridcraft#237): the official GridCraft build is used as is, without a patch
+
 ## 0.1.5 – 2026-10-21
 
 - GridCraft 0.10.0 (commit 8ae67c5), which includes the embedding bridge this app uses (storytold/gridcraft#237): the official GridCraft build is used as is, without a patch
