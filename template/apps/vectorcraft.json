@@ -1,6 +1,6 @@
 {
   "id": "vectorcraft",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "name": "VectorCraft",
   "kind": "vector illustration app",
   "noun": "drawing",
@@ -46,8 +46,8 @@
   "readme_features": "- **Edit in VectorCraft** appears in the Files action menu of every SVG, Illustrator (.ai), EPS and VectorCraft file you can read.\n- **Save** (Ctrl/⌘+S) writes the drawing back to Nextcloud in its own format, and Nextcloud keeps the previous state as a file version.\n- **Save As**, **Save a Copy** and **Export** (PDF, PNG, JPEG, WebP, SVG…) ask for a name and folder in your Nextcloud the first time; VectorCraft's own Save As dialog picks the name and format first.",
   "readme_limitations": "- PDFs open in VectorCraft from its own File › Open; in Files, PDFs are left to PDF apps.",
   "bridge_notes": "With `?host=parent`, what VectorCraft would download goes to the parent instead, and the parent guards leaving the page with unsaved changes. VectorCraft's own Save As dialog still picks the name and format.",
-  "upstream_ref": "e99dea21ff0ae0e7dcabfa889c7e39bd9a136e75",
-  "upstream_version": "0.14.0",
+  "upstream_ref": "8622d0c71c18a166d666314058be7f0e3e9b290f",
+  "upstream_version": "0.17.0",
   "bindgen_flags": [
     "--weak-refs"
   ]

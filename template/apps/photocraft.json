@@ -1,6 +1,6 @@
 {
   "id": "photocraft",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "name": "PhotoCraft",
   "kind": "image editor",
   "noun": "image",
@@ -73,8 +73,8 @@
   "readme_limitations": "- Brush, gradient and swatch libraries stay in the browser's storage, as in PhotoCraft's own web version.",
   "bridge_notes": "With `?host=parent`, Save, Save As and Export ask the parent where to save (`photocraft:pick-save`), what PhotoCraft writes goes to the parent instead of the browser's downloads, and the parent (not PhotoCraft) guards leaving the page with unsaved changes. File › Open keeps the browser's own file picker.",
   "pick_save": true,
-  "upstream_ref": "6d8cbac7dcc4a2c8a32e0ceefe637cd72c98da32",
-  "upstream_version": "0.12.0",
+  "upstream_ref": "dacecbfea1d5ca3270b44d09ac35e3d195618cb0",
+  "upstream_version": "0.16.0",
   "cargo_profile": "wasm-release",
   "cargo_features": "heif",
   "bindgen_flags": [

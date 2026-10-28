@@ -1,6 +1,6 @@
 {
   "id": "soundcraft",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "name": "SoundCraft",
   "kind": "audio workstation",
   "noun": "session",
@@ -60,8 +60,8 @@
   "bridge_notes": "SoundCraft's browser build saves a session as one bundle file (`.scraftz`) and hands every saved or exported file to its delivery hook; with `?host=parent` the hook sends it to the parent as `soundcraft:save` (by file name). Before a session saved in a folder (`.scraft`) opens, SoundCraft asks for the audio it uses:\n\n| Message | Direction | Fields | Meaning |\n|---|---|---|---|\n| `soundcraft:need` | SoundCraft → parent | `paths` | Audio files a `.scraft` session uses, as paths on the parent's side. |\n| `soundcraft:file` | parent → SoundCraft | `path`, `blob` or `error` | One of them, or why it can't be had (it opens as missing). |\n\n`soundcraft:open` also carries `path` and sends a `Blob` rather than bytes; an audio file opens as a new session whose Save makes a bundle. In host mode the demo session doesn't open, and the parent guards leaving the page.",
   "open_as_blob": true,
   "boot_before": "\t// Browsers start audio only after a user gesture: SoundCraft's audio output is built at\n\t// startup, so resume every AudioContext it creates on the first click or key press.\n\tconst AudioContextBase = window.AudioContext || window.webkitAudioContext\n\tif (AudioContextBase) {\n\t\tconst contexts = []\n\t\tconst Resumable = function (options) {\n\t\t\tconst context = new AudioContextBase(options)\n\t\t\tcontexts.push(context)\n\t\t\treturn context\n\t\t}\n\t\tResumable.prototype = AudioContextBase.prototype\n\t\twindow.AudioContext = Resumable\n\t\tif (window.webkitAudioContext) {\n\t\t\twindow.webkitAudioContext = Resumable\n\t\t}\n\t\tconst resume = () => contexts.forEach((context) => { if (context.state === 'suspended') { context.resume().catch(() => {}) } })\n\t\tfor (const type of ['pointerdown', 'mousedown', 'touchstart', 'keydown']) {\n\t\t\twindow.addEventListener(type, resume, { capture: true })\n\t\t}\n\t}\n",
-  "upstream_ref": "30ef8306f8a4b569b6ef96d6faeaf07ad714e999",
-  "upstream_version": "0.11.0",
+  "upstream_ref": "a8c19f0ffe44b992aad227bc409e5de01ceb59c4",
+  "upstream_version": "0.13.1",
   "bindgen_flags": [
     "--weak-refs"
   ],

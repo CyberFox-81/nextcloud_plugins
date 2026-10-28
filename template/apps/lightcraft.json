@@ -1,6 +1,6 @@
 {
   "id": "lightcraft",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "name": "LightCraft",
   "kind": "photo editor",
   "noun": "photo",
@@ -64,7 +64,7 @@
   "web_extra_rows": [
     "| `build.txt`, `build-<hash>/` | The current build: `frame.html` (the page in the editor's iframe, static so LightCraft's relative URLs resolve in its folder), `boot.js`, the glue, the wasm and `worker.js` (render workers) |"
   ],
-  "upstream_ref": "3dc3b955dfc76084e33f82a12ed1bc60230bf8be",
-  "upstream_version": "0.11.0",
+  "upstream_ref": "07bc2008d9457603bb77f6b3de33a901db75a8c4",
+  "upstream_version": "0.14.0",
   "bindgen_flags": []
 }
