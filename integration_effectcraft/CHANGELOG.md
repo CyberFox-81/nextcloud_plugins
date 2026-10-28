@@ -4,6 +4,11 @@
 -->
 # Changelog
 
+## 0.1.8 – 2026-10-27
+
+- EffectCraft 0.17.0 (commit dd12ed8): the latest EffectCraft, with the embedding bridge rebased onto it
+- Still carries the fix that finds a project's footage in the browser: EffectCraft now checks stored paths with the shared craft-docpath library, which has the same problem on the web (it never counts a path as absolute there)
+
 ## 0.1.7 – 2026-10-21
 
 - EffectCraft 0.14.0 (commit cee4c16): the latest EffectCraft, with the embedding bridge rebased onto it
