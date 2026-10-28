@@ -4,6 +4,10 @@
 -->
 # Changelog
 
+## 0.1.7 – 2026-10-27
+
+- CADCraft 0.13.0 (commit 2721aa8), which includes the embedding bridge this app uses (storytold/cadcraft#509): the official CADCraft build is used as is, without a patch
+
 ## 0.1.6 – 2026-10-21
 
 - CADCraft 0.10.0 (commit 54d9683), which includes the embedding bridge this app uses (storytold/cadcraft#509): the official CADCraft build is used as is, without a patch
