@@ -4,6 +4,10 @@
 -->
 # Changelog
 
+## 0.1.6 – 2026-10-27
+
+- DesignCraft 0.13.0 (commit 1abeda4): the latest DesignCraft, with the embedding bridge rebased onto it
+
 ## 0.1.5 – 2026-10-21
 
 - DesignCraft 0.11.0 (commit e2a2502): the latest DesignCraft, with the embedding bridge rebased onto it
