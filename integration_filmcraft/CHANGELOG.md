@@ -4,6 +4,11 @@
 -->
 # Changelog
 
+## 0.1.7 – 2026-10-27
+
+- FilmCraft 0.13.0 (commit 7428957): the latest FilmCraft, with the embedding bridge rebased onto it
+- Carries a fix so the media a project links to are still followed in the browser: FilmCraft 0.13 checks stored paths with the shared craft-docpath library, which never counts a path as absolute there
+
 ## 0.1.6 – 2026-10-21
 
 - FilmCraft 0.10.0 (commit e8253ff): the latest FilmCraft, with the embedding bridge rebased onto it
