@@ -4,6 +4,11 @@
 -->
 # Changelog
 
+## 0.1.5 – 2026-10-27
+
+- SoundCraft 0.13.1 (commit a8c19f0): the latest SoundCraft, with the embedding bridge rebased onto it
+- Carries a fix so the audio files a session links to are still followed in the browser: SoundCraft 0.13 checks stored paths with the shared craft-docpath library, which never counts a path as absolute there
+
 ## 0.1.4 – 2026-10-21
 
 - SoundCraft 0.11.0 (commit 30ef830): the latest SoundCraft, with the embedding bridge rebased onto it
