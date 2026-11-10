@@ -18,7 +18,7 @@ Started with `?host=parent` inside an iframe, {{NAME}} talks to its parent windo
 |---|---|---|---|
 | `{{ID}}:ready` | {{NAME}} → parent | `version` | The app is listening; send a file now. |
 | `{{ID}}:open` | parent → {{NAME}} | `name`, `bytes` (`ArrayBuffer` or `Uint8Array`) | Open this file, as File › Open would. |
-{{PICK_SAVE_ROWS}}| `{{ID}}:save` | {{NAME}} → parent | `name`, `bytes` (transferred `ArrayBuffer`) | A file {{NAME}} would otherwise download: Save, Save As or Export. `name` is a file name, or a path the parent picked. The parent stores the file and reports success or failure itself. |
+{{PICK_SAVE_ROWS}}| `{{ID}}:save` | {{NAME}} → parent | `name`, `bytes` (transferred `ArrayBuffer`), `saveAs` (boolean, optional) | A file {{NAME}} would otherwise download: Save, Save As or Export. `name` is a file name, or a path the parent picked. With `saveAs: true` the parent asks where to keep it, even under a name it saved before, and that file becomes the {{NOUN}}'s file. The parent stores the file and reports success or failure itself. |
 | `{{ID}}:dirty` | {{NAME}} → parent | `dirty` (boolean) | Unsaved changes appeared or went away. |
 | `{{ID}}:failed` | {{NAME}} → parent | `error` | The app couldn't start (for example, no WebGPU or WebGL2). |
 

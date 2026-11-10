@@ -1,13 +1,13 @@
 {
   "id": "deckcraft",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "name": "DeckCraft",
   "kind": "presentation app",
   "noun": "presentation",
   "nouns": "presentations",
   "file_types": "PowerPoint or DeckCraft",
   "summary": "Edit PowerPoint presentations in Nextcloud with DeckCraft",
-  "description": "Open a PowerPoint (.pptx, .potx, .ppsx) or DeckCraft presentation in Files with **Edit in DeckCraft** and work on it right in the browser: themes, layouts, shapes, pictures, tables, charts, transitions, animations, speaker notes and the slide show.\n\n- **Save** stores the presentation in DeckCraft's own format next to the original the first time (you pick the name and folder), and to that file from then on. **File › Export › PowerPoint** writes the .pptx back, and Nextcloud keeps the previous state as a file version.\n- **Export** (PDF, PNG, JPEG, outline) stores a file in any folder you pick.\n- Read-only files open normally; saving offers a copy.\n- If someone else changes the file while you have it open, you choose whether to replace their version or save a copy.\n- Optionally, clicking a presentation in Files opens it in DeckCraft.",
+  "description": "Open a PowerPoint (.pptx, .potx, .ppsx) or DeckCraft presentation in Files with **Edit in DeckCraft** and work on it right in the browser: themes, layouts, shapes, pictures, tables, charts, transitions, animations, speaker notes and the slide show.\n\n- **Save** writes the presentation back in its own format (a .pptx stays a .pptx), and Nextcloud keeps the previous state as a file version.\n- **Save As** stores it under a name and in a folder you pick, as PowerPoint or in DeckCraft's own format; later saves go to that file.\n- **Export** (PDF, PNG, JPEG, outline) stores a file in any folder you pick.\n- Read-only files open normally; saving offers a copy.\n- If someone else changes the file while you have it open, you choose whether to replace their version or save a copy.\n- Optionally, clicking a presentation in Files opens it in DeckCraft.",
   "categories": [
     "office",
     "files",
@@ -36,12 +36,14 @@
   "background": "#262626",
   "background_dark": "#1e1e20",
   "icon_path": "M3 4h18v12H3Zm2 2v8h14V6Zm2 5h2v2H7Zm3-2h2v4h-2Zm3-2h2v6h-2ZM11 16h2v3h-2ZM8 19h8v2H8Z",
-  "readme_features": "- **Edit in DeckCraft** appears in the Files action menu of every PowerPoint (.pptx, .potx, .ppsx) and DeckCraft (.deckcraft) presentation you can read.\n- **Save** (Ctrl/⌘+S) stores the presentation in DeckCraft's own format: the first time, you pick the name and folder (it's offered next to the original), and later saves go to that file. **File › Export › PowerPoint** writes the .pptx back under its own name. Nextcloud keeps the previous state of a file as a version.\n- **Export** (PDF, PNG, JPEG, outline) asks for a name and folder in your Nextcloud the first time.",
-  "readme_limitations": "- In the browser DeckCraft saves in its own format (.deckcraft); PowerPoint files are written with **File › Export › PowerPoint**.",
-  "bridge_notes": "With `?host=parent`, DeckCraft starts without the sample deck, an optional `&author=<name>` signs the user's comments, and the parent guards leaving the page with unsaved changes. A presentation handed to the parent (DeckCraft, PowerPoint) counts as saved.",
-  "upstream_ref": "88c2ceff5fab9d34dd262a8184bbbd61ca369b97",
-  "upstream_version": "0.11.1",
+  "readme_features": "- **Edit in DeckCraft** appears in the Files action menu of every PowerPoint (.pptx, .potx, .ppsx) and DeckCraft (.deckcraft) presentation you can read.\n- **Save** (Ctrl/⌘+S) writes the presentation back to Nextcloud in its own format (a .pptx stays a .pptx), and Nextcloud keeps the previous state as a file version.\n- **Save As** (Ctrl/⌘+Shift+S) asks for a name and folder in your Nextcloud, as PowerPoint or in DeckCraft's own format (.deckcraft); later saves go to that file.\n- **Export** (PDF, PNG, JPEG, outline) asks for a name and folder in your Nextcloud the first time.",
+  "bridge_notes": "With `?host=parent`, DeckCraft starts with an empty presentation instead of the sample deck, an optional `&author=<name>` signs the user's comments, and the parent guards leaving the page with unsaved changes. Save sends the opened presentation back under its own name and format; Save As (`saveAs: true`) and a first Save of a presentation the parent never sent ask the parent where to keep it.",
+  "upstream_ref": "0623b430324cf4c3d1962e6ae7885cf30c011c5e",
+  "upstream_version": "0.15.0",
   "bindgen_flags": [
     "--weak-refs"
-  ]
+  ],
+  "bridge_upstream": {
+    "pr": 1809
+  }
 }
